@@ -41,7 +41,6 @@ __pycache__/
 *.db
 *.sqlite
 *.sqlite3
-*.sql
 
 # Dữ liệu đã xử lý và mô hình đã huấn luyện (BỊ BỎ QUA)
 # Các file này thường rất lớn và có thể được tạo lại từ mã nguồn và dữ liệu thô.
