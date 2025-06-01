@@ -15,26 +15,20 @@ input_gensim = []
 for sen in sentences:
     input_gensim.append(sen.split())
 
-# Cập nhật đường dẫn lưu mô hình vào models/
 w2v_model_save_path = os.path.join(project_root, 'models', 'w2v.model')
 
-# Đảm bảo thư mục đích tồn tại trước khi lưu file mô hình
 os.makedirs(os.path.dirname(w2v_model_save_path), exist_ok=True)
 
-# Bỏ comment dòng huấn luyện mô hình nếu bạn muốn chạy nó
-model = Word2Vec(input_gensim, vector_size=128, window=5, min_count=0, workers=4, sg=1)
-model.wv.save(w2v_model_save_path)
+# Bỏ comment để huấn luyện
+# model = Word2Vec(input_gensim, vector_size=128, window=5, min_count=0, workers=4, sg=1)
+# model.wv.save(w2v_model_save_path)
 
-# Dòng tải mô hình này có vẻ không cần thiết trong file trainer nếu bạn chỉ huấn luyện.
-# Nếu bạn muốn kiểm tra ngay sau khi lưu, có thể giữ lại.
-# w2v_model = word2vec.KeyedVectors.load(w2v_model_save_path) # Cần import gensim.models.keyedvectors as word2vec
-
-# Để code gốc của bạn hoạt động, bạn cần import word2vec
 w2v_model = word2vec.KeyedVectors.load(w2v_model_save_path)
 
 
 vocabulary = []
-# for word in w2v_model.index_to_key: # Dòng này bị comment trong code gốc
-#    vocabulary.append(word)
+for word in w2v_model.index_to_key:
+    vocabulary.append(word)
+
 print(len(sentences))
 print(len(vocabulary))
