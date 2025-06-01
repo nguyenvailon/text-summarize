@@ -1,0 +1,98 @@
+<<<<<<< HEAD
+# Tệp hệ điều hành và các file không liên quan đến mã nguồn
+.DS_Store
+Thumbs.db
+.ipynb_checkpoints/ # Nếu bạn có sử dụng Jupyter Notebook
+*.bak                # File backup
+
+# Thư mục môi trường ảo Python
+# Thư mục này chứa các thư viện đã cài đặt. Rất quan trọng phải bỏ qua.
+venv/
+.venv/
+env/
+ENV/
+=======
+# Tệp hệ điều hành
+.DS_Store
+Thumbs.db
+.ipynb_checkpoints/ # Nếu bạn có sử dụng Jupyter Notebook
+
+# Thư mục môi trường ảo Python
+.venv/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+>>>>>>> 83c1b7c5599fe9ced85fdeb8dc711c50b6e71a2e
+
+# Byte-code compiled files
+*.pyc
+*.pyo
+__pycache__/
+
+<<<<<<< HEAD
+# Log files
+*.log
+
+# Database files
+# Các file cơ sở dữ liệu SQLite của bạn (ví dụ: summaries.db)
+# Không nên đưa lên Git vì chúng thường chứa dữ liệu động.
+*.db
+*.sqlite
+*.sqlite3
+*.sql
+
+# Dữ liệu đã xử lý và mô hình đã huấn luyện (BỊ BỎ QUA)
+# Các file này thường rất lớn và có thể được tạo lại từ mã nguồn và dữ liệu thô.
+# Việc bỏ qua chúng giúp giữ cho repository nhỏ gọn.
+data/processed/  # Bỏ qua toàn bộ thư mục chứa sentences.pkl
+models/          # Bỏ qua toàn bộ thư mục models (bao gồm w2v.model và w2v.model.vectors.npy)
+
+# Files cấu hình cục bộ (ví dụ: khóa API, mật khẩu, biến môi trường)
+# Rất quan trọng để không đưa các file này lên Git.
+# Hãy sử dụng .env.example (được theo dõi) và .env (bị bỏ qua) cho các biến môi trường.
+.env
+.flaskenv
+
+# Files hệ thống hoặc cài đặt IDE (ví dụ: Visual Studio Code)
+=======
+# Log và database
+*.log
+*.sqlite3
+*.db # Bao gồm các file database SQLite
+
+# Dữ liệu đã xử lý và mô hình đã huấn luyện
+# Các file này thường rất lớn và có thể được tạo lại từ mã nguồn.
+# Nếu bạn muốn version control chúng, hãy loại bỏ các dòng này.
+data/processed/
+models/*.model
+models/*.npy # Ví dụ: w2v.model.vectors.npy
+
+# Files hệ thống (ví dụ: Visual Studio Code)
+>>>>>>> 83c1b7c5599fe9ced85fdeb8dc711c50b6e71a2e
+.vscode/
+
+# Các file tạm thời hoặc file output không cần theo dõi
+*.tmp
+*.temp
+*.out
+*.zip
+<<<<<<< HEAD
+*.rar      # Nếu bạn có các file .rar trong thư mục data/raw hoặc bất cứ đâu
+*.tar.gz
+*.csv      # Nếu bạn có các file CSV được tạo ra làm output tạm thời
+*.json     # Nếu bạn có các file JSON được tạo ra làm output tạm thời
+
+# Thư mục chứa file tải lên của người dùng (nếu có trong tương lai)
+# Nếu ứng dụng của bạn cho phép người dùng tải lên file, hãy bỏ qua thư mục này.
+# uploads/
+=======
+*.rar # Như bạn có file .rar trong data/raw
+
+# Files cấu hình cục bộ (ví dụ: khóa API, mật khẩu)
+# Nếu bạn có các file cấu hình chứa thông tin nhạy cảm.
+# Ví dụ: config.ini, .env
+# Tốt nhất là tạo một file .env.example và .env riêng.
+.env
+>>>>>>> 83c1b7c5599fe9ced85fdeb8dc711c50b6e71a2e

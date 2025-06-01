@@ -1,0 +1,34 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.flashes {
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.flashes li {
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.recent-summaries h2 {
+    color: #34495e;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+        margin: 5px;
+    }
+}

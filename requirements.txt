@@ -1,0 +1,7 @@
+Flask 
+pyvi 
+gensim 
+scikit-learn 
+underthesea 
+numpy
+config
