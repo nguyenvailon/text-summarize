@@ -4,10 +4,6 @@ from pyvi import ViTokenizer
 from tqdm import tqdm
 import pickle
 
-# Đường dẫn này cần trỏ đến thư mục gốc của dự án (text_summarizer/)
-# os.path.realpath(__file__) là src/get_data.py
-# os.path.dirname(...) là src/
-# os.path.dirname(os.path.dirname(...)) là thư mục gốc text_summarizer/
 dir_path = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
 
 def get_data(folder):
@@ -27,7 +23,6 @@ def get_data(folder):
                             sentences.append(sen)
     return sentences
 
-# Cập nhật đường dẫn tới thư mục data/raw
 train_paths = [
     os.path.join(dir_path, 'data', 'raw', '10Topics', 'Ver1.1', 'Train_Full'),
     os.path.join(dir_path, 'data', 'raw', '10Topics', 'Ver1.1', 'Test_Full'),
@@ -42,5 +37,8 @@ for path in tqdm(train_paths):
 
 print(len(sentences))
 
-# Cập nhật đường dẫn để lưu file pkl vào data/processed
-pickle.dump(sentences, open(os.path.join(dir_path, 'data', 'processed', 'sentences.pkl'), 'wb'))
+pickle_output_dir = os.path.join(dir_path, 'data', 'processed')
+os.makedirs(pickle_output_dir, exist_ok=True)
+
+pickle.dump(sentences, open(os.path.join(pickle_output_dir, 'sentences.pkl'), 'wb'))
+
