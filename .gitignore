@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Tệp hệ điều hành và các file không liên quan đến mã nguồn
 .DS_Store
 Thumbs.db
@@ -10,12 +11,27 @@ venv/
 .venv/
 env/
 ENV/
+=======
+# Tệp hệ điều hành
+.DS_Store
+Thumbs.db
+.ipynb_checkpoints/ # Nếu bạn có sử dụng Jupyter Notebook
+
+# Thư mục môi trường ảo Python
+.venv/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+>>>>>>> 83c1b7c5599fe9ced85fdeb8dc711c50b6e71a2e
 
 # Byte-code compiled files
 *.pyc
 *.pyo
 __pycache__/
 
+<<<<<<< HEAD
 # Log files
 *.log
 
@@ -39,6 +55,21 @@ models/          # Bỏ qua toàn bộ thư mục models (bao gồm w2v.model v�
 .flaskenv
 
 # Files hệ thống hoặc cài đặt IDE (ví dụ: Visual Studio Code)
+=======
+# Log và database
+*.log
+*.sqlite3
+*.db # Bao gồm các file database SQLite
+
+# Dữ liệu đã xử lý và mô hình đã huấn luyện
+# Các file này thường rất lớn và có thể được tạo lại từ mã nguồn.
+# Nếu bạn muốn version control chúng, hãy loại bỏ các dòng này.
+data/processed/
+models/*.model
+models/*.npy # Ví dụ: w2v.model.vectors.npy
+
+# Files hệ thống (ví dụ: Visual Studio Code)
+>>>>>>> 83c1b7c5599fe9ced85fdeb8dc711c50b6e71a2e
 .vscode/
 
 # Các file tạm thời hoặc file output không cần theo dõi
@@ -46,6 +77,7 @@ models/          # Bỏ qua toàn bộ thư mục models (bao gồm w2v.model v�
 *.temp
 *.out
 *.zip
+<<<<<<< HEAD
 *.rar      # Nếu bạn có các file .rar trong thư mục data/raw hoặc bất cứ đâu
 *.tar.gz
 *.csv      # Nếu bạn có các file CSV được tạo ra làm output tạm thời
@@ -54,3 +86,12 @@ models/          # Bỏ qua toàn bộ thư mục models (bao gồm w2v.model v�
 # Thư mục chứa file tải lên của người dùng (nếu có trong tương lai)
 # Nếu ứng dụng của bạn cho phép người dùng tải lên file, hãy bỏ qua thư mục này.
 # uploads/
+=======
+*.rar # Như bạn có file .rar trong data/raw
+
+# Files cấu hình cục bộ (ví dụ: khóa API, mật khẩu)
+# Nếu bạn có các file cấu hình chứa thông tin nhạy cảm.
+# Ví dụ: config.ini, .env
+# Tốt nhất là tạo một file .env.example và .env riêng.
+.env
+>>>>>>> 83c1b7c5599fe9ced85fdeb8dc711c50b6e71a2e
