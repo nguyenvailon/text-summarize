@@ -1,8 +1,17 @@
 from gensim.models.keyedvectors import KeyedVectors
 import numpy as np
-from text_processing import preprocess_user_text  # Import hàm bạn đã viết
+import os # Thêm import os để xử lý đường dẫn
+
+# Cập nhật import để trỏ đến text_processing.py trong cùng package src
+from text_processing import preprocess_user_text
+
+# Lấy đường dẫn thư mục gốc của dự án
+# Từ 'src/word_embedding.py', ta đi lên 1 cấp ('src') để đến thư mục gốc của dự án.
+project_root = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
+
 # Load mô hình đã huấn luyện
-model = KeyedVectors.load("w2v.model")
+# Cập nhật đường dẫn để trỏ tới models/w2v.model
+model = KeyedVectors.load(os.path.join(project_root, 'models', 'w2v.model'))
 
 def get_sentence_vectors(user_input):
     processed_sentences = preprocess_user_text(user_input)

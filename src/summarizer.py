@@ -1,5 +1,5 @@
-from w2v import get_sentence_vectors
-from underthesea import sent_tokenize  # Dùng underthesea cho tiếng Việt
+from word_embedding import get_sentence_vectors
+from underthesea import sent_tokenize # Dùng underthesea cho tiếng Việt
 import numpy as np
 from sklearn.cluster import KMeans
 from sklearn.metrics import pairwise_distances_argmin_min
@@ -22,11 +22,11 @@ X = np.array(sentence_vectors)
 # Nhập số câu tóm tắt từ người dùng, tối đa không quá số câu có thể tóm tắt
 while True:
     try:
-        n_clusters = int(input(f"Nhập số câu tóm tắt (tối đa {len(sentence_vectors)}): "))
-        if 1 <= n_clusters <= len(sentence_vectors):
-            break
-        else:
-            print("Vui lòng nhập số hợp lệ trong khoảng từ 1 đến số câu hợp lệ.")
+       n_clusters = int(input(f"Nhập số câu tóm tắt (tối đa {len(sentence_vectors)}): "))
+       if 1 <= n_clusters <= len(sentence_vectors):
+        break
+       else:
+        print("Vui lòng nhập số hợp lệ trong khoảng từ 1 đến số câu hợp lệ.")
     except ValueError:
         print("Vui lòng nhập số nguyên hợp lệ.")
 
@@ -37,9 +37,9 @@ kmeans.fit(X)
 # Tính trung bình chỉ số câu trong mỗi cụm để sắp xếp tóm tắt đúng thứ tự
 avg = []
 for j in range(n_clusters):
-    idx = np.where(kmeans.labels_ == j)[0]
-    avg_index = np.mean(idx)
-    avg.append(avg_index)
+   idx = np.where(kmeans.labels_ == j)[0]
+   avg_index = np.mean(idx)
+   avg.append(avg_index)
 
 # Tìm câu gần tâm cụm nhất
 closest, _ = pairwise_distances_argmin_min(kmeans.cluster_centers_, X)
