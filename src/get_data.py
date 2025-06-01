@@ -4,10 +4,6 @@ from pyvi import ViTokenizer
 from tqdm import tqdm
 import pickle
 
-# Đường dẫn này cần trỏ đến thư mục gốc của dự án (text_summarizer/)
-# os.path.realpath(__file__) là src/get_data.py
-# os.path.dirname(...) là src/
-# os.path.dirname(os.path.dirname(...)) là thư mục gốc text_summarizer/
 dir_path = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
 
 def get_data(folder):
