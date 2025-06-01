@@ -23,10 +23,6 @@ def get_data(folder):
                             sentences.append(sen)
     return sentences
 
-<<<<<<< HEAD
-=======
-# Cập nhật đường dẫn tới thư mục data/raw
->>>>>>> 83c1b7c5599fe9ced85fdeb8dc711c50b6e71a2e
 train_paths = [
     os.path.join(dir_path, 'data', 'raw', '10Topics', 'Ver1.1', 'Train_Full'),
     os.path.join(dir_path, 'data', 'raw', '10Topics', 'Ver1.1', 'Test_Full'),
@@ -41,13 +37,3 @@ for path in tqdm(train_paths):
 
 print(len(sentences))
 
-<<<<<<< HEAD
-pickle_output_dir = os.path.join(dir_path, 'data', 'processed')
-os.makedirs(pickle_output_dir, exist_ok=True)
-
-pickle.dump(sentences, open(os.path.join(pickle_output_dir, 'sentences.pkl'), 'wb'))
-
-=======
-# Cập nhật đường dẫn để lưu file pkl vào data/processed
-pickle.dump(sentences, open(os.path.join(dir_path, 'data', 'processed', 'sentences.pkl'), 'wb'))
->>>>>>> 83c1b7c5599fe9ced85fdeb8dc711c50b6e71a2e
