@@ -30,7 +30,7 @@ __pycache__/
 # Các file này thường rất lớn và có thể được tạo lại từ mã nguồn và dữ liệu thô.
 # Việc bỏ qua chúng giúp giữ cho repository nhỏ gọn.
 data/processed/  # Bỏ qua toàn bộ thư mục chứa sentences.pkl
-# models/          # Bỏ qua toàn bộ thư mục models (bao gồm w2v.model và w2v.model.vectors.npy)
+models/          # Bỏ qua toàn bộ thư mục models (bao gồm w2v.model và w2v.model.vectors.npy)
 
 # Files cấu hình cục bộ (ví dụ: khóa API, mật khẩu, biến môi trường)
 # Rất quan trọng để không đưa các file này lên Git.
@@ -50,7 +50,6 @@ data/processed/  # Bỏ qua toàn bộ thư mục chứa sentences.pkl
 *.tar.gz
 *.csv      # Nếu bạn có các file CSV được tạo ra làm output tạm thời
 *.json     # Nếu bạn có các file JSON được tạo ra làm output tạm thời
-*.pkl
 
 # Thư mục chứa file tải lên của người dùng (nếu có trong tương lai)
 # Nếu ứng dụng của bạn cho phép người dùng tải lên file, hãy bỏ qua thư mục này.
