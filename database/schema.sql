@@ -1,8 +1,0 @@
-DROP TABLE IF EXISTS summaries;
-
-CREATE TABLE summaries (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    original_text TEXT NOT NULL,
-    summary_text TEXT NOT NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
