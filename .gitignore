@@ -50,6 +50,7 @@ data/processed/  # Bỏ qua toàn bộ thư mục chứa sentences.pkl
 *.tar.gz
 *.csv      # Nếu bạn có các file CSV được tạo ra làm output tạm thời
 *.json     # Nếu bạn có các file JSON được tạo ra làm output tạm thời
+*.pkl
 
 # Thư mục chứa file tải lên của người dùng (nếu có trong tương lai)
 # Nếu ứng dụng của bạn cho phép người dùng tải lên file, hãy bỏ qua thư mục này.
