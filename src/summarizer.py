@@ -1,5 +1,9 @@
 from word_embedding import get_sentence_vectors
+<<<<<<< HEAD
 from underthesea import sent_tokenize
+=======
+from underthesea import sent_tokenize # Dùng underthesea cho tiếng Việt
+>>>>>>> 83c1b7c5599fe9ced85fdeb8dc711c50b6e71a2e
 import numpy as np
 from sklearn.cluster import KMeans
 from sklearn.metrics import pairwise_distances_argmin_min
